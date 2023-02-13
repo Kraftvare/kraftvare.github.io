@@ -28,7 +28,7 @@
       <main>
         <img id="logo" src="images/favicon.svg" alt="kraftvare logo" />
         <h1>Kraftvare</h1>
-        <p>Programvare for småkraft</p>
+        <p class="slogan">Programvare for småkraft</p>
         <div class="download-from-container">
           <img
             src="images/google-play-badge-no.png"
@@ -39,6 +39,9 @@
             alt="Download on App Store"
           />
         </div>
+        <p class="web-app">
+          eller bruk appen i <a href="https://app.kraftvare.no" target="_blank">nettleser</a>
+        </p>
       </main>
       <footer>
         <p>6817 Naustdal</p>
@@ -75,13 +78,14 @@
     main h1 {
       margin-bottom: 0;
     }
-    main p {
+    main .slogan {
       margin-top: 5px;
       font-style: italic;
     }
     .download-from-container {
       display: flex;
       justify-content: center;
+      margin-top: 30px;
     }
     .download-from-container img:first-child {
       height: 52px;
@@ -98,6 +102,12 @@
     }
     footer a {
       color: gray;
+    }
+    .web-app {
+      margin-top: 5px;
+    }
+    .web-app a {
+      color: inherit;
     }
   </style>
   <script>
