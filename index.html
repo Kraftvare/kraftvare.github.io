@@ -1,15 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-        <title>Kraftvare</title>
-        <meta name="description" content="Programvare for kraftbransjen" />
-        <link rel="icon" href="/favicons/favicon.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/favicons/favicon.ico" type="image/png" sizes="16x16" />
-    </head>
-    <body>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kraftvare</title>
+    <meta name="description" content="Programvare for kraftbransjen" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="keywords" content="kraftvare, småkraft, programvare" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="alternate icon"
+      href="images/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <img id="logo" src="images/favicon.svg" alt="kraftvare logo" />
         <h1>Kraftvare</h1>
-        <p>Programvare for kraftbransjen</p>
-    </body>
+        <p>Programvare for småkraft</p>
+        <div class="download-from-container">
+          <img
+            src="images/google-play-badge-no.png"
+            alt="Download on Google Play"
+          />
+          <img
+            src="images/app-store-badge-no-black.svg"
+            alt="Download on App Store"
+          />
+        </div>
+      </main>
+      <footer>
+        <p>6817 Naustdal</p>
+        <p>
+          Telefon:
+          <a id="mobile" href="javascript:void(0);">Vis telefonnummer</a>
+        </p>
+        <p>E-post: <a id="email" href="javascript:void(0);">Vis epost</a></p>
+      </footer>
+    </div>
+  </body>
+  <style>
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+    }
+    body {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      text-align: center;
+    }
+    #logo {
+      margin-top: 10%;
+      width: 100px;
+    }
+    main h1 {
+      margin-bottom: 0;
+    }
+    main p {
+      margin-top: 5px;
+      font-style: italic;
+    }
+    .download-from-container {
+      display: flex;
+      justify-content: center;
+    }
+    .download-from-container img:first-child {
+      height: 52px;
+    }
+    .download-from-container img:last-child {
+      padding-top: 6px;
+      height: 40px;
+      width: 130px;
+    }
+    footer p {
+      margin: 0;
+      font-size: 14px;
+      color: gray;
+    }
+    footer a {
+      color: gray;
+    }
+  </style>
+  <script>
+    window.onload = () => {
+      document.getElementById("mobile").onclick = (event) => {
+        event.preventDefault();
+        event.target.innerHTML = atob("NDAyNDcwNzM=");
+      };
+      document.getElementById("email").onclick = (event) => {
+        event.preventDefault();
+        event.target.innerHTML = atob("dmVnYXJkLmdpbGxlc3RhZEBnbWFpbC5jb20=");
+      };
+    };
+  </script>
 </html>
